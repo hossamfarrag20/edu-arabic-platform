@@ -1,0 +1,70 @@
+
+/*
+Theme Name: منصة التعلم العربية
+Description: موضوع WordPress للتعليم الإلكتروني باللغة العربية
+Version: 1.0
+Author: منصة التعلم
+Text Domain: edu-arabic-platform
+*/
+
+/* استيراد Tailwind CSS */
+@import url('https://cdn.tailwindcss.com');
+
+/* تخصيص الخطوط العربية */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* تخصيص الألوان */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #f59e0b;
+    --text-color: #1e293b;
+    --bg-color: #f8fafc;
+}
+
+/* تخصيص WordPress */
+.wp-admin-bar {
+    direction: ltr;
+}
+
+/* تخصيص المكونات */
+.hero-section {
+    background: linear-gradient(to left, #2563eb, #3b82f6, #4f46e5);
+    color: white;
+    padding: 80px 0;
+}
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* تجاوبية */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
